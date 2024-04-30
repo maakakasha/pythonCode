@@ -1,8 +1,16 @@
 class MyClass:
-    def __init__ (self, name, age):
-        self.name = name
-        self.age = age
+    def __init__ (this, name, age):
+        this.name = name
+        this.age = age
+        
+    def __str__(this):
+        return f"{this.name}({this.age})"
+    
+    def printMyClass(this):
+        print(f"here is the value of x in MyClass {this.name}")
     
 newClass = MyClass("Mahmoud", 21)
 
-print(f"here is the value of x in MyClass {newClass.name}")
+newClass.printMyClass()
+
+del newClass.name
